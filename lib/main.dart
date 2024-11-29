@@ -83,7 +83,10 @@ class WelcomeScreen extends StatelessWidget {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Ação do botao (será implementada depois)
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const TestPage()),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.orange,
@@ -105,6 +108,19 @@ class WelcomeScreen extends StatelessWidget {
 
           // Área cinza para futura imagem (placeholder)
         ),
+      ),
+    );
+  }
+}
+
+class TestPage extends StatelessWidget {
+  const TestPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Rota de Teste'),
       ),
     );
   }
