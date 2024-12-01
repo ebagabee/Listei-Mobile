@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './screens/shopping_list_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -85,7 +86,8 @@ class WelcomeScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const TestPage()),
+                      MaterialPageRoute(
+                          builder: (context) => const ShoppingListScreen()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
@@ -108,19 +110,6 @@ class WelcomeScreen extends StatelessWidget {
 
           // Área cinza para futura imagem (placeholder)
         ),
-      ),
-    );
-  }
-}
-
-class TestPage extends StatelessWidget {
-  const TestPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Rota de Teste'),
       ),
     );
   }
