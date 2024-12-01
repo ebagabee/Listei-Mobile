@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../components/shopping_list_card.dart';
+import 'package:listei_mobile/components/new_list_card.dart';
 
 class ShoppingListScreen extends StatelessWidget {
   const ShoppingListScreen({super.key});
@@ -8,7 +8,6 @@ class ShoppingListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // Scaffold é o widget base que fornece a estrutura visual básica do Material Design
-
       appBar: AppBar(
         // AppBar é a barra superior do aplicativo
         leading: Padding(
@@ -32,9 +31,15 @@ class ShoppingListScreen extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(32.0),
         child: Column(
-          children: const [ShoppingListCard()],
+          children: [
+            NewListCard(
+              onTap: () {
+                print('Criar nova lista');
+              },
+            )
+          ],
         ),
       ),
     );
