@@ -17,8 +17,8 @@ class NewListCard extends StatelessWidget {
 
       // BoxDecoration define o visual do container
       decoration: BoxDecoration(
-        // Gradiente linear (degradê)
-          gradient: LinearGradient(
+          // Gradiente linear (degradê)
+          gradient: const LinearGradient(
             colors: [
               Color(0xFFFF5722),
               Color(0xFFFF7043),
