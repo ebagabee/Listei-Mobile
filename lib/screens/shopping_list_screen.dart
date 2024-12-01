@@ -31,12 +31,15 @@ class ShoppingListScreen extends StatelessWidget {
         ],
       ),
       body: Padding(
+        // Espaçamento de 32 pixels em todas as direções
         padding: const EdgeInsets.all(32.0),
         child: Column(
           children: [
+            // Uso do componente NewListCard
             NewListCard(
               onTap: () {
                 print('Criar nova lista');
+                // TODO: Navegação
               },
             )
           ],
